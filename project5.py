@@ -17,7 +17,12 @@ try:
             marks_sum += mark
         result_rating = round((marks_sum / count), 2)
         result_mark = round(result_rating)
-        result_txt.write("\n{} - рейтинг: {}, оценка: {}\n".format(student, result_rating, result_mark))
+        if result_mark <= 2:
+            result_txt.write("\n{} - рейтинг: {}, оценка: {}."
+                             " Не аттестован.\n".format(student, result_rating, result_mark))
+        else:
+            result_txt.write("\n{} - рейтинг: {}, оценка: {}."
+                             " Аттестован.\n".format(student, result_rating, result_mark))
         count = 0
         marks_sum = 0
 except ValueError:
