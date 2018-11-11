@@ -17,9 +17,8 @@ try:
             marks_sum += mark
         result_rating = round((marks_sum / count), 2)
         result_mark = round(result_rating)
-        result_txt.write("{} - рейтинг: {}, оценка: {} ".format(student, result_rating, result_mark))
+        result_txt.write("\n{} - рейтинг: {}, оценка: {}\n".format(student, result_rating, result_mark))
         count = 0
         marks_sum = 0
 except ValueError:
-    print('Ошибка. Перезапустите программу и попробуйте снова.')
-
+    print('Ошибка. Вы ввели неверный символ. Перезапустите программу и попробуйте снова.')
